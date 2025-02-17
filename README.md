@@ -5,7 +5,6 @@
 Ce projet consiste en la mise en place d'un cluster de 2 machines virtuelles (VM) configurées via **Vagrant**. <br>
 Ces machines seront utilisées pour déployer une application Spring Boot sur le serveur **web** et 
 une base de données MySQL sur le serveur **db**.  <br>
-Le projet utilise **Node.js** pour démarrer un serveur sur le port 8086 et tester l'intégration avec la base de données MySQL.
 
 ## Prérequis
 
@@ -18,9 +17,9 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 ### 1. Création des machines virtuelles
 
 - Créez 2 dossiers pour les machines : `web` et `db`.
-![alt text](image.png)
+![alt text](image.png) <br>
 - Utilisez **Vagrant** pour configurer les machines virtuelles.
-   #### - Pour db: 
+   ### - Pour db: 
     ![alt text](image-1.png)
     ### - Pour web:
     ![alt text](image-2.png)
@@ -48,8 +47,8 @@ cd admin-app
 ![alt text](image-11.png)
 ![alt text](image-12.png)
 
-### 4. Changez le port en 8086 :
-![alt text](image-13.png)
+### 4. Changez le port en 8086 pour démarrer un serveur sur le port 8086:
+![alt text](image-27.png)
 
 ### 5. Configuration la machine Web:
 #### Sur la machine Web: :
@@ -79,7 +78,7 @@ ping 192.168.33.11  # Depuis db vers web
 ```
 ![alt text](image-18.png)
 
-### 6.Installer install
+### 7.Installer:
 #### Sur la machine Web, installer jdk la version 17:
 ```sh
 sudo apt install -y openjdk-17-jdk
@@ -105,7 +104,7 @@ sudo apt install mysql-server -y
 ![alt text](image-14.png)
 #### Créer la base de données : Connectez-vous à MySQL en tant qu'utilisateur root :
 ![alt text](image-20.png)
-#### Maintenant on cree un utilisateur:
+#### Maintenant on crée un utilisateur:
 ```sh
 CREATE USER 'user'@'%' IDENTIFIED BY 'user123'; 
 ```
@@ -129,3 +128,5 @@ mvn spring-boot:run -DskipTests
 ![alt text](image-30.png)
 ![alt text](image-31.png)
 
+#### Félicitations ! 🎉 Vous avez mis en place un cluster de 2 machines avec une application Spring Boot connectée à une base de données MySQL.
+### Auteur: Khadidiatou DIA / sokhnakhadidjah@gmail.com
